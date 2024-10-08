@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import './App.css'
+import { CategoryCardList } from './components/CategoryCardList'
+import { AddCategoryForm } from './components/AddCategoryForm'
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
+    <>
+      <CategoryCardList />
+      <AddCategoryForm />
+    </>
+  )
 }
 
-export default App;
+export default App
