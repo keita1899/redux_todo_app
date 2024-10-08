@@ -11,7 +11,7 @@ export const todoSlice = createSlice({
       state,
       action: PayloadAction<{ id: number; categoryId: number; name: string }>
     ) => {
-      state.push({ ...action.payload, isEdit: false, isComplete: false })
+      state.push({ ...action.payload, isEditing: false, isComplete: false })
     },
   },
 })

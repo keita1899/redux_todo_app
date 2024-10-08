@@ -1,7 +1,7 @@
 export type Category = {
   id: number
   title: string
-  isEdit: boolean
+  isEditing: boolean
 }
 
 export type Categories = {
@@ -12,7 +12,7 @@ export type Todo = {
   id: number
   categoryId: number
   name: string
-  isEdit: boolean
+  isEditing: boolean
   isComplete: boolean
 }
 

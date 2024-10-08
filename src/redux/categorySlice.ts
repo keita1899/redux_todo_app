@@ -11,7 +11,7 @@ export const categorySlice = createSlice({
       state,
       action: PayloadAction<{ id: number; title: string }>
     ) => {
-      state.push({ ...action.payload, isEdit: false })
+      state.push({ ...action.payload, isEditing: false })
     },
   },
 })
