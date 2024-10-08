@@ -10,7 +10,7 @@ type CategoryCardProps = {
 export const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
     <div className='bg-white shadow-lg rounded-lg p-4 w-100'>
-      <CategoryCardHeading title={category.title} />
+      <CategoryCardHeading id={category.id} title={category.title} />
       <TodoList categoryId={category.id} />
       <AddTodoForm categoryId={category.id} />
     </div>
