@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { deleteCategory, editCategory } from '../redux/categorySlice'
+import { deleteCategory, toggleEditCategory } from '../redux/categorySlice'
 import { deleteTodoByCategoryId } from '../redux/todoSlice'
 
 type CategoryCardHeadingProps = {
@@ -21,7 +21,7 @@ export const CategoryCardHeading = ({
   return (
     <div className='flex justify-between items-center'>
       <h3
-        onDoubleClick={() => dispatch(editCategory(id))}
+        onDoubleClick={() => dispatch(toggleEditCategory(id))}
         className='font-bold text-lg'
       >
         {title}
