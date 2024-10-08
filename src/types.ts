@@ -15,3 +15,7 @@ export type Todo = {
   isEdit: boolean
   isComplete: boolean
 }
+
+export type Todos = {
+  todos: Todo[]
+}
