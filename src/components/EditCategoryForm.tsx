@@ -13,6 +13,7 @@ export const EditCategoryForm = ({ id, title }: EditCategoryFormProps) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (editCategoryTitle === '') return
     dispatch(updateCategory({ id, editCategoryTitle }))
   }
 
