@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { updateTodo } from '../redux/todoSlice'
+import { toggleEditTodo, updateTodo } from '../redux/todoSlice'
 
 type EditTodoNameFormProps = {
   id: number
@@ -13,9 +13,10 @@ export const EditTodoNameForm = ({ id, name }: EditTodoNameFormProps) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (editTodoName === '') return
+    if (editTodoName.trim() === '' || editTodoName === name) return
 
     dispatch(updateTodo({ id, editTodoName }))
+    dispatch(toggleEditTodo(id))
   }
 
   return (

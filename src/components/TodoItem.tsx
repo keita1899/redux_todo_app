@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { Todo } from '../types'
-import { completeTodo, deleteTodo, editTodo } from '../redux/todoSlice'
+import { completeTodo, deleteTodo, toggleEditTodo } from '../redux/todoSlice'
 
 type TodoProps = {
   todo: Todo
@@ -18,7 +18,7 @@ export const TodoItem = ({ todo }: TodoProps) => {
         className='mr-3 h-4 w-4 text-green-500 focus:ring-green-400 border-gray-300 rounded'
       />
       <span
-        onDoubleClick={() => dispatch(editTodo(todo.id))}
+        onDoubleClick={() => dispatch(toggleEditTodo(todo.id))}
         className={todo.isComplete ? 'line-through text-gray-500' : ''}
       >
         {todo.name}
