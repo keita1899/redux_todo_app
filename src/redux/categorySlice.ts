@@ -16,7 +16,7 @@ export const categorySlice = createSlice({
     deleteCategory: (state, action: PayloadAction<number>) => {
       return state.filter((category) => category.id !== action.payload)
     },
-    editCategory: (state, action: PayloadAction<number>) => {
+    toggleEditCategory: (state, action: PayloadAction<number>) => {
       const category = state.find((category) => category.id === action.payload)
       if (category) {
         category.isEditing = !category.isEditing
@@ -31,12 +31,15 @@ export const categorySlice = createSlice({
       )
       if (category) {
         category.title = action.payload.editCategoryTitle
-        category.isEditing = !category.isEditing
       }
     },
   },
 })
 
-export const { addCategory, deleteCategory, editCategory, updateCategory } =
-  categorySlice.actions
+export const {
+  addCategory,
+  deleteCategory,
+  toggleEditCategory,
+  updateCategory,
+} = categorySlice.actions
 export default categorySlice.reducer
