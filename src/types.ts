@@ -4,9 +4,7 @@ export type Category = {
   isEditing: boolean
 }
 
-export type Categories = {
-  categories: Category[]
-}
+export type Categories = Category[]
 
 export type Todo = {
   id: number
@@ -16,6 +14,4 @@ export type Todo = {
   isComplete: boolean
 }
 
-export type Todos = {
-  todos: Todo[]
-}
+export type Todos = Todo[]
