@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { Todo } from '../types'
-import { completeTodo } from '../redux/todoSlice'
+import { completeTodo, deleteTodo } from '../redux/todoSlice'
 
 type TodoProps = {
   todo: Todo
@@ -20,7 +20,7 @@ export const TodoItem = ({ todo }: TodoProps) => {
       <span className={todo.isComplete ? 'line-through text-gray-500' : ''}>
         {todo.name}
       </span>
-      <button className='text-red-500 hover:text-red-700'>削除</button>
+      <button onClick={() => dispatch(deleteTodo(todo.id))} className='text-red-500 hover:text-red-700'>削除</button>
     </li>
   )
 }
