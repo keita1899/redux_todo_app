@@ -7,3 +7,11 @@ export type Category = {
 export type Categories = {
   categories: Category[]
 }
+
+export type Todo = {
+  id: number
+  categoryId: number
+  name: string
+  isEdit: boolean
+  isComplete: boolean
+}
