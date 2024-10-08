@@ -9,7 +9,7 @@ export const CategoryCardList = () => {
   return (
     <div className='flex space-x-4 p-4'>
       {categories.map((category: Category) => (
-        <CategoryCard category={category} />
+        <CategoryCard key={category.id} category={category} />
       ))}
     </div>
   )
